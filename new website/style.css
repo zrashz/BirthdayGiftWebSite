@@ -1,0 +1,460 @@
+/* General styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 80px;
+    width: 75px;
+}
+
+.links {
+    list-style: none;
+    margin: 0;
+    padding: 90;
+    display: flex;
+}
+
+.links li {
+    margin-left: 50px;
+}
+
+.links a {
+    color: #f7efef;
+    text-decoration: none;
+}
+
+/* Home section styles */
+.home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.main-text h3 {
+    font-size: 2.5rem;
+}
+
+/* Services section styles */
+/* Services section styles */
+.services {
+    position: relative;
+    padding: 50px 20px;
+}
+
+.services-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5; /* Optional: Adjust for visibility */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.heading {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-around; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.row {
+    width: 30%; /* Adjust width to fit images in one row */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.row img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Control image size */
+}
+
+.row h3 {
+    font-size: 1.2rem; /* Adjust title font size */
+    margin: 10px 0;
+}
+
+.row p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+}
+#about {
+    padding: 40px 20px;
+    background-color: #d3f4de; /* Light background for contrast */
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* More space between image and text */
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+.about-info {
+    flex: 1;
+    max-width: 600px; /* Limit the width for better readability */
+}
+
+.about-info h6 {
+    font-size: 1.4rem;
+    color: #e71e54; /* Accent color for the heading */
+    margin-bottom: 0.5rem;
+}
+
+.about-info h3 {
+    font-size: 2.4rem;
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 1rem;
+}
+
+.about-info p {
+    font-size: 1.2rem;
+    color: #100b57; /* Slightly lighter color for the paragraph text */
+    line-height: 1.6; /* Improve readability with line spacing */
+    margin-bottom: 1.5rem;
+}
+
+.about-info button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background-color: #d70e55;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-info button:hover {
+    background-color: #d20a43; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Adjusted width for a larger image */
+    border-radius: 15px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.gallery {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for the gallery section */
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading h3 {
+    font-size: 2rem;
+    color: #333; /* Dark color for heading text */
+}
+
+.heading i {
+    margin-left: 10px;
+    color: #007BFF; /* Accent color for the arrow icon */
+    display: none; /* Hide arrow icon as per your previous request */
+}
+
+.gallery-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fixed 4 images per row */
+    gap: 15px; /* Space between images */
+    justify-content: center; /* Center images horizontally */
+}
+
+.gallery-card img {
+    max-width: 100%;
+    width: 350px;
+    height: 250px;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.1); /* Increased zoom effect on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery-card {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-card {
+        grid-template-columns: 1fr; /* 1 image per row on very small screens */
+    }
+}
+
+#packages {
+    padding: 50px 20px;
+    background-color: #fff; /* Background color for the packages section */
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading h3 {
+    font-size: 2.5rem;
+    color: #333; /* Dark color for heading text */
+}
+
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.row {
+    background: #f9f9f9; /* Light background for each package card */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure content doesn't overflow card */
+    width: calc(33.333% - 20px); /* Three cards per row, accounting for gap */
+    max-width: 350px; /* Maximum width for each card */
+    text-align: center; /* Center text and elements within each card */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF; /* Accent line below image */
+    border-radius: 10px;
+}
+
+.row h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.row p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.row h5 {
+    font-size: 1.25rem;
+    color: #ff0000; /* Accent color for pricing */
+    margin: 10px 0;
+}
+
+.row button {
+    background-color: #110005; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.row button:hover {
+    background-color: #ef093f; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        width: 100%; /* One card per row on small screens */
+    }
+}
+
+/* Additional section styles */
+.about, .gallery, .packages, .book, .reviews, .contact {
+    padding: 50px 20px;
+}
+
+
+#contact {
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Light grey background for a clean look */
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+}
+
+.contact-info h5 {
+    font-size: 2rem;
+    color: #333; /* Dark color for the section title */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif; /* Clean font for the title */
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #666; /* Grey color for contact information */
+    margin: 10px 0;
+}
+
+.contact-info i {
+    color: #bd1854; /* Accent color for icons */
+    margin-right: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners for fields */
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #bd1854; /* Accent color on focus */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing for textarea */
+    min-height: 150px; /* Minimum height for textarea */
+}
+
+.contact-form .submit {
+    background-color:#bd1854; /* Accent color for the button */
+    color: #fff; /* White text for contrast */
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit:hover {
+    background-color: #bd1854; /* Darker shade on hover */
+}
+
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin: 10px 0;
+}
